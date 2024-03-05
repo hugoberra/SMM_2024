@@ -1,0 +1,5 @@
+[client]
+database = smm_db
+user = paulinoflores
+password = Pa53t02os79
+default-character-set = utf8
