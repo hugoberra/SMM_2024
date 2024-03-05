@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Ver municipios</title>
-    </head>
+<head>
+    <title>Ver Municipios</title>
+</head>
 <body>
-    <h1>Lista de municipios</h1>
+    <h1>Lista de Municipios</h1>
     <table>
-        <thread>
+        <thead>
             <tr>
                 <th>Nombre</th>
                 <th>Ciudad</th>
@@ -14,18 +14,18 @@
                 <th>Gobierno</th>
                 <th>Status</th>
             </tr>
-        </thread>
+        </thead>
         <tbody>
             {% for municipio in municipios %}
             <tr>
-                <td>[{municipio.name}]</td>
-                <td>[{municipio.city}]</td>
-                <td>[{municipio.rfc}]</td>
-                <td>[{municipio.goverment}]</td>
-                <td>[{municipio.satus}]</td>
-                <td> 
-                    <a href="{% url ''}"></a>
-                    <a href="{% url ''%}"></a>
+                <td>{{ municipio.name }}</td>
+                <td>{{ municipio.city }}</td>
+                <td>{{ municipio.rfc }}</td>
+                <td>{{ municipio.government }}</td>
+                <td>{{ municipio.status }}</td>
+                <td>
+                    <a href="{% url 'modificar_municipio' municipio.id %}">Modificar</a>    <!-- Botón de Modificar -->
+                    <a href="{% url 'eliminar_municipio' municipio.id %}">Eliminar</a>      <!-- Botón de Eliminar -->
                 </td>
             </tr>
             {% endfor %}

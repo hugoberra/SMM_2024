@@ -80,7 +80,7 @@ DATABASES = {
         'OPTIONS': {
             #'read_default_file':'database_config.cnf',
             'read_default_file':'SMM_2024/database_config.cnf',
-        },
+        }
     }
 }
 
