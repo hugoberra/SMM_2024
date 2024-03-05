@@ -1,3 +1,6 @@
+#configuracion de base de datos
+SMM_2024/database_config.cnf
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
