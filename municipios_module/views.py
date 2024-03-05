@@ -6,6 +6,9 @@ from .forms import MunicipalityForm
 
 # Create your views here.
 
+def dashboard(request):
+    return render(request, 'dashboard_component/dashboard.html')
+
 def ver_municipios(request):
     municipios = Municipality.objects.all()
     return render(request, 'gestion_municipio_component/view_municipality/view_municipality.html', {'municipios': municipios}) #ver_municipios
@@ -34,7 +37,7 @@ def registrar_municipio(request):
         form = MunicipalityForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('#')  # Redirige al dashboard o a alguna otra página
+            return redirect('dashboard')  # Redirige al dashboard o a alguna otra página
     else:
         form = MunicipalityForm()
 
